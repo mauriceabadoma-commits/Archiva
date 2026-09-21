@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archiva – CERs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="page">
+
+    <header class="header">
+        <nav class="header__nav container" aria-label="Navigation principale">
+            <a class="header__logo" href="index.html">
+                <img class="header__logo-img" src="assets/images/logo.svg" alt="Archiva Logo">
+            </a>
+
+            <!-- Menu mobile sans JavaScript : la case à cocher pilote l'affichage du panneau -->
+            <input class="header__toggle visually-hidden" type="checkbox" id="menu-toggle">
+            <label class="header__burger" for="menu-toggle">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+                <span class="visually-hidden">Ouvrir le menu</span>
+            </label>
+            <label class="header__backdrop" for="menu-toggle"></label>
+
+            <div class="header__panel">
+                <label class="header__close" for="menu-toggle">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+                    <span class="visually-hidden">Fermer le menu</span>
+                </label>
+                <ul class="nav__list">
+                        <li class="nav__item"><a class="nav__link" href="index.html">Accueil</a></li>
+                        <li class="nav__item"><a class="nav__link nav__link--active" href="cers.html" aria-current="page">CERs</a></li>
+                        <li class="nav__item"><a class="nav__link" href="favoris.html">Mes CER Favoris</a></li>
+                        <li class="nav__item"><a class="nav__link" href="mes-cers.html">Gestion de CER</a></li>
+                </ul>
+                <a class="btn btn--primary header__cta" href="connexion.html">Connexion</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page__main">
+
+        <section class="section container" aria-labelledby="cers-title">
+            <div class="section__head">
+                <div>
+                    <h1 class="section__title" id="cers-title">Tous les CERs</h1>
+                    <p class="section__lead">Parcourez les comptes rendus d'anciens prosits archivés par la communauté et retrouvez rapidement celui dont vous avez besoin.</p>
+                </div>
+            </div>
+
+            <form class="toolbar" action="cers.html" method="get" role="search">
+                <label class="search toolbar__search">
+                <span class="visually-hidden">Rechercher un CER</span>
+                <svg class="icon search__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+                <input class="search__input" type="search" name="q" placeholder="Rechercher un CER">
+            </label>
+                <label class="toolbar__select">
+                    <span class="visually-hidden">Filtrer par niveau</span>
+                    <select class="form__control form__control--select" name="niveau">
+                        <option value="">Tous les niveaux</option>
+                        <option value="x1">X1</option>
+                        <option value="x2">X2</option>
+                        <option value="x3">X3</option>
+                    </select>
+                </label>
+                <button class="btn btn--primary" type="submit">Rechercher</button>
+            </form>
+
+        <div class="cer-grid">
+            <article class="cer-card">
+                <img class="cer-card__image" src="assets/images/active-directory.svg" alt="Active Directory">
+            <div class="cer-card__meta">
+                <label class="cer-card__fav">
+                    <input class="cer-card__fav-input" type="checkbox" aria-label="Ajouter aux favoris : Prosit 3.2 Annuaire Active Directory">
+                    <svg class="icon cer-card__fav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+                </label>
+                <span class="cer-card__author">par Sadjo Mamadou</span>
+            </div>
+                <div class="cer-card__body">
+                    <h3 class="cer-card__title">Prosit 3.2 Annuaire Active Directory</h3>
+                    <p class="cer-card__description">L'Annuaire Active Directory (AD) est un service de gestion des identités et des accès utilisé principalement dans les environnements Windows. Il permet de centraliser les comptes utilisateurs, les groupes, les ordinateurs et les stratégies de sécurité d'une organisation.</p>
+                    <a class="btn btn--soft btn--block cer-card__cta" href="#">Consulter le CER</a>
+                </div>
+            </article>
+            <article class="cer-card">
+                <img class="cer-card__image" src="assets/images/uml.svg" alt="Unified Modeling Language">
+            <div class="cer-card__meta">
+                <label class="cer-card__fav">
+                    <input class="cer-card__fav-input" type="checkbox" aria-label="Ajouter aux favoris : Prosit 2.2 Modélisation UML">
+                    <svg class="icon cer-card__fav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+                </label>
+                <span class="cer-card__author">par Pauline Iock</span>
+            </div>
+                <div class="cer-card__body">
+                    <h3 class="cer-card__title">Prosit 2.2 Modélisation UML</h3>
+                    <p class="cer-card__description">Le Langage de Modélisation Unifié, de l'anglais Unified Modeling Language, est un langage de modélisation graphique à base de pictogrammes conçu comme une méthode normalisée de visualisation dans les domaines du développement logiciel et de la conception orientée objet.</p>
+                    <a class="btn btn--soft btn--block cer-card__cta" href="#">Consulter le CER</a>
+                </div>
+            </article>
+            <article class="cer-card">
+                <img class="cer-card__image" src="assets/images/advanced-dev.svg" alt="Développement avancé">
+            <div class="cer-card__meta">
+                <label class="cer-card__fav">
+                    <input class="cer-card__fav-input" type="checkbox" aria-label="Ajouter aux favoris : Prosit 4.1 Développement avancé">
+                    <svg class="icon cer-card__fav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+                </label>
+                <span class="cer-card__author">par Providence Djekoun.</span>
+            </div>
+                <div class="cer-card__body">
+                    <h3 class="cer-card__title">Prosit 4.1 Développement avancé</h3>
+                    <p class="cer-card__description">Advance Web Development fait référence au processus de création de sites Web dynamiques et interactifs qui vont au-delà des pages Web statiques. Cela implique l'utilisation de techniques et de technologies de codage avancées pour créer des sites Web fonctionnels et visuellement attrayants qui améliorent l'expérience utilisateur.</p>
+                    <a class="btn btn--soft btn--block cer-card__cta" href="#">Consulter le CER</a>
+                </div>
+            </article>
+            <article class="cer-card">
+                <img class="cer-card__image" src="assets/images/api.svg" alt="API et Webservice">
+            <div class="cer-card__meta">
+                <label class="cer-card__fav">
+                    <input class="cer-card__fav-input" type="checkbox" aria-label="Ajouter aux favoris : Prosit 3.3 API et Webservice">
+                    <svg class="icon cer-card__fav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+                </label>
+                <span class="cer-card__author">par Daryl Noupik</span>
+            </div>
+                <div class="cer-card__body">
+                    <h3 class="cer-card__title">Prosit 3.3 API et Webservice</h3>
+                    <p class="cer-card__description">Les API sont principalement axées sur la communication entre applications pour l'accès aux fonctionnalités. L'EDI se concentre sur l'échange de documents entre systèmes d'information, avec des formats et des protocoles standardisés.</p>
+                    <a class="btn btn--soft btn--block cer-card__cta" href="#">Consulter le CER</a>
+                </div>
+            </article>
+            <article class="cer-card">
+                <img class="cer-card__image" src="assets/images/microservices.svg" alt="Architecture microservices">
+            <div class="cer-card__meta">
+                <label class="cer-card__fav">
+                    <input class="cer-card__fav-input" type="checkbox" aria-label="Ajouter aux favoris : Prosit 4.5 Architecture microservices">
+                    <svg class="icon cer-card__fav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+                </label>
+                <span class="cer-card__author">par Providence Djekoun.</span>
+            </div>
+                <div class="cer-card__body">
+                    <h3 class="cer-card__title">Prosit 4.5 Architecture microservices</h3>
+                    <p class="cer-card__description">Une architecture de microservices est un type d'architecture d'application dans laquelle l'application est développée sous la forme d'un ensemble de services indépendants, déployables séparément et qui communiquent entre eux par des interfaces légères.</p>
+                    <a class="btn btn--soft btn--block cer-card__cta" href="#">Consulter le CER</a>
+                </div>
+            </article>
+            <article class="cer-card">
+                <img class="cer-card__image" src="assets/images/distributed.svg" alt="Architecture distribuée">
+            <div class="cer-card__meta">
+                <label class="cer-card__fav">
+                    <input class="cer-card__fav-input" type="checkbox" aria-label="Ajouter aux favoris : Prosit 4.5 Architecture distribuée">
+                    <svg class="icon cer-card__fav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+                </label>
+                <span class="cer-card__author">par Sadjo Mamadou</span>
+            </div>
+                <div class="cer-card__body">
+                    <h3 class="cer-card__title">Prosit 4.5 Architecture distribuée</h3>
+                    <p class="cer-card__description">L'architecture distribuée ou l'informatique distribuée désigne un système d'information ou un réseau pour lequel l'ensemble des ressources disponibles ne se trouvent pas au même endroit ni sur la même machine, mais sont réparties sur plusieurs nœuds.</p>
+                    <a class="btn btn--soft btn--block cer-card__cta" href="#">Consulter le CER</a>
+                </div>
+            </article>
+            <article class="cer-card">
+                <img class="cer-card__image" src="assets/images/web-intro.svg" alt="Introduction au développement Web">
+            <div class="cer-card__meta">
+                <label class="cer-card__fav">
+                    <input class="cer-card__fav-input" type="checkbox" checked aria-label="Ajouter aux favoris : Prosit 1.7 Introduction au développement Web">
+                    <svg class="icon cer-card__fav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+                </label>
+                <span class="cer-card__author">par Providence Djekoun.</span>
+            </div>
+                <div class="cer-card__body">
+                    <h3 class="cer-card__title">Prosit 1.7 Introduction au développement Web</h3>
+                    <p class="cer-card__description">Ce prosit présente les fondamentaux du développement Web : structurer une page avec HTML, la mettre en forme avec CSS, appliquer les bonnes pratiques DRY et BEM, et adapter l'interface à tous les écrans grâce aux media queries.</p>
+                    <a class="btn btn--soft btn--block cer-card__cta" href="#">Consulter le CER</a>
+                </div>
+            </article>
+        </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner container">
+            <div class="footer__brand">
+                <img class="footer__logo-img" src="assets/images/logo.svg" alt="Archiva Logo">
+                <address class="footer__contact">
+                    <span class="footer__contact-item"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M22 6l-10 7L2 6"/></svg> info@archiva.com</span>
+                    <span class="footer__contact-item"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +237 600 000 000</span>
+                    <span class="footer__contact-item"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Yaoundé, Douala/Cameroun</span>
+                </address>
+            </div>
+
+            <div>
+                <h2 class="footer__heading">Accueil</h2>
+                <ul class="footer__list">
+                    <li><a class="footer__link" href="cers.html">CERs</a></li>
+                    <li><a class="footer__link" href="favoris.html">Mes CERs favoris</a></li>
+                    <li><a class="footer__link" href="mes-cers.html">Gestion de CER</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="footer__heading">Social Profiles</h2>
+                <div class="footer__social">
+                    <a class="footer__social-link" href="#" aria-label="Facebook"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                    <a class="footer__social-link" href="#" aria-label="Twitter"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+                    <a class="footer__social-link" href="#" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+                </div>
+            </div>
+        </div>
+        <p class="footer__copyright">© 2024 Archiva. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

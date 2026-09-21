@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archiva – Connexion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="page page--auth">
+
+    <main class="auth">
+        <div class="auth__card">
+            <div>
+                <h1 class="auth__title">Se connecter</h1>
+                <form class="form" action="index.html" method="post">
+                    <div class="form__field">
+                        <label class="form__label" for="email">Email</label>
+                        <input class="form__control" type="email" id="email" name="email" placeholder="Entrer votre email" autocomplete="email" required>
+                    </div>
+
+                    <div class="form__field">
+                        <label class="form__label" for="password">Mot de passe</label>
+                        <div class="form__wrap">
+                            <input class="form__control form__control--with-icon" type="password" id="password" name="password" placeholder="Entrer votre mot de passe" autocomplete="current-password" required>
+                            <svg class="icon form__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        </div>
+                    </div>
+
+                    <a class="form__link" href="#">Mot de passe oublié ?</a>
+
+                    <button class="btn btn--primary btn--block btn--lg" type="submit">Se connecter</button>
+
+                    <p class="form__footer">
+                        Vous n'avez pas de compte ? <a class="form__footer-link" href="inscription.html">Créez un nouveau compte</a>
+                        <svg class="icon form__footer-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+                    </p>
+                </form>
+            </div>
+            <img class="auth__illustration" src="assets/images/login-illustration.svg" alt="">
+        </div>
+    </main>
+
+</body>
+</html>

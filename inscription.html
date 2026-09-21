@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archiva – Inscription</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="page page--auth">
+
+    <main class="auth">
+        <div class="auth__card">
+            <div>
+                <h1 class="auth__title">Créer un compte</h1>
+                <form class="form" action="connexion.html" method="post">
+                    <div class="form__field">
+                        <label class="form__label" for="nom">Nom complet</label>
+                        <input class="form__control" type="text" id="nom" name="nom" placeholder="Nom complet" autocomplete="name" required>
+                    </div>
+
+                    <div class="form__field">
+                        <label class="form__label" for="email">Email</label>
+                        <input class="form__control" type="email" id="email" name="email" placeholder="Entrer votre email" autocomplete="email" required>
+                    </div>
+
+                    <div class="form__field">
+                        <label class="form__label" for="niveau">Niveaux</label>
+                        <select class="form__control form__control--select" id="niveau" name="niveau">
+                            <option value="x1">X1</option>
+                            <option value="x2">X2</option>
+                            <option value="x3">X3</option>
+                        </select>
+                    </div>
+
+                    <div class="form__field">
+                        <label class="form__label" for="password">Mot de passe</label>
+                        <div class="form__wrap">
+                            <input class="form__control form__control--with-icon" type="password" id="password" name="password" placeholder="Entrer votre mot de passe" autocomplete="new-password" required>
+                            <svg class="icon form__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        </div>
+                    </div>
+
+                    <button class="btn btn--primary btn--block btn--lg" type="submit">Créer un compte</button>
+
+                    <p class="form__footer">
+                        Vous avez déjà un compte ? <a class="form__footer-link" href="connexion.html">Connectez-vous</a>
+                        <svg class="icon form__footer-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+                    </p>
+                </form>
+            </div>
+            <img class="auth__illustration" src="assets/images/signup-illustration.svg" alt="">
+        </div>
+    </main>
+
+</body>
+</html>
