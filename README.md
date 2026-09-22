@@ -32,3 +32,5 @@ workshop1/
 Les images sont des illustrations SVG de remplacement. Pour utiliser les visuels de la maquette
 Figma, exportez-les dans `assets/images/` et modifiez l'attribut `src` correspondant
 (ex. `logo.svg` → `logo.png`).
+🔗 Site en ligne : https://archiva-xxxx.vercel.app
+📦 Dépôt : https://github.com/mauriceabadoma-commits/Archiva
