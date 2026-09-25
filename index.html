@@ -43,6 +43,13 @@
 
     <main class="page__main">
 
+    <div class="banner" data-welcome-banner hidden>
+        <p>Bienvenue sur Archiva ! Explorez la banque de CERs de la promotion.</p>
+        <button class="banner__close" type="button" data-welcome-close aria-label="Fermer ce message">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+        </button>
+    </div>
+
         <section class="hero" aria-labelledby="hero-title">
             <div class="hero__inner container">
                 <form class="hero__search" action="cers.html" method="get" role="search">
@@ -188,6 +195,7 @@
                     <li><a class="footer__link" href="cers.html">CERs</a></li>
                     <li><a class="footer__link" href="favoris.html">Mes CERs favoris</a></li>
                     <li><a class="footer__link" href="mes-cers.html">Gestion de CER</a></li>
+                    <li><a class="footer__link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
 
@@ -202,6 +210,8 @@
         </div>
         <p class="footer__copyright">© 2024 Archiva. All rights reserved.</p>
     </footer>
+
+    <script src="scripts/script.js" defer></script>
 
 </body>
 </html>

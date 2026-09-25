@@ -727,6 +727,89 @@ textarea {
 }
 
 
+/* 8bis. COMPOSANTS JS : BANDEAU DE BIENVENUE, ERREURS DE FORMULAIRE, VOIR PLUS
+   Ces classes ne prennent effet qu'avec scripts/script.js.
+   ========================================================================== */
+
+/* Bandeau de bienvenue */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: 0.75rem var(--space-2);
+    background: #fff4e5;
+    border-bottom: 1px solid #f3d9ae;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.banner[hidden] {
+    display: none;
+}
+
+.banner__close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.banner__close:hover {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+/* Erreurs de champ de formulaire */
+.form__control--invalid {
+    border-color: var(--color-danger);
+}
+
+.form__control--invalid:focus {
+    box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.2);
+}
+
+.form__error {
+    min-height: 1.1rem;
+    font-size: 0.75rem;
+    color: var(--color-danger);
+}
+
+/* Message de succès après envoi du formulaire */
+.form__success {
+    padding: var(--space-2);
+    background: #eaf7ee;
+    border: 1px solid #b9e4c4;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.form__success[hidden] {
+    display: none;
+}
+
+/* Bouton "Voir plus" et son contenu */
+.load-more {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-3);
+}
+
+.more-cers[hidden] {
+    display: none;
+}
+
+.more-cers {
+    margin-top: var(--space-3);
+}
+
+
 /* 9. PAGES D'AUTHENTIFICATION (connexion / inscription)
    Pas d'en-tête : fond dégradé + carte blanche en deux colonnes.
    ========================================================================== */
